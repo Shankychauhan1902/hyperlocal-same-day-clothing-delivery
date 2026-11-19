@@ -3,3 +3,6 @@ node_modules/
 .DS_Store
 dist/
 coverage/
+
+# Local environment files and templates are kept out of GitHub
+.env*

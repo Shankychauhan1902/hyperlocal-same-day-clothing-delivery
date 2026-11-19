@@ -1,0 +1,64 @@
+// Nearwear theme tokens. Change these in one place to update the whole interface.
+$nw-brand: #53684f;
+$nw-brand-dark: #40533d;
+$nw-brand-soft: #eef1eb;
+$nw-ink: #21231f;
+$nw-admin-ink: #292c26;
+$nw-muted: #77796f;
+$nw-line: #e5e3dc;
+$nw-paper: #f8f7f4;
+$nw-admin-paper: #f5f6f3;
+$nw-white: #ffffff;
+$nw-success: #5d7d55;
+$nw-warning: #a07a49;
+$nw-info: #688298;
+$nw-font-body: 'DM Sans', sans-serif;
+$nw-font-display: 'Playfair Display', serif;
+$nw-radius: 0;
+$nw-radius-pill: 999px;
+$nw-space-1: 0.25rem;
+$nw-space-2: 0.5rem;
+$nw-space-3: 0.75rem;
+$nw-space-4: 1rem;
+$nw-space-5: 1.5rem;
+$nw-space-6: 2rem;
+
+// Bootstrap theme overrides.
+$primary: $nw-brand;
+$secondary: #68785f;
+$success: $nw-success;
+$warning: #b28750;
+$info: $nw-info;
+$body-bg: $nw-paper;
+$body-color: $nw-ink;
+$font-family-sans-serif: $nw-font-body;
+$border-color: $nw-line;
+$border-radius: $nw-radius;
+$border-radius-sm: $nw-radius;
+$border-radius-lg: $nw-radius;
+$btn-border-radius: $nw-radius;
+$input-border-radius: $nw-radius;
+$card-border-radius: $nw-radius;
+
+:root {
+  --nw-brand: #{$nw-brand};
+  --nw-brand-dark: #{$nw-brand-dark};
+  --nw-brand-soft: #{$nw-brand-soft};
+  --nw-ink: #{$nw-ink};
+  --nw-admin-ink: #{$nw-admin-ink};
+  --nw-muted: #{$nw-muted};
+  --nw-line: #{$nw-line};
+  --nw-paper: #{$nw-paper};
+  --nw-admin-paper: #{$nw-admin-paper};
+  --nw-white: #{$nw-white};
+  --nw-success: #{$nw-success};
+  --nw-warning: #{$nw-warning};
+  --nw-info: #{$nw-info};
+  --nw-font-body: #{$nw-font-body};
+  --nw-font-display: #{$nw-font-display};
+  --ink: var(--nw-ink);
+  --muted: var(--nw-muted);
+  --line: var(--nw-line);
+  --green: var(--nw-brand);
+  --paper: var(--nw-paper);
+}

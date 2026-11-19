@@ -1,0 +1,76 @@
+// Shared class kit. Prefer these for new screens; existing feature selectors below extend them.
+.nw-surface {
+  background: $nw-white;
+  border: 1px solid $nw-line;
+  box-shadow: 0 2px 8px #1a211504;
+}
+
+.nw-button {
+  min-height: 2.5rem;
+  border: 1px solid transparent;
+  border-radius: $nw-radius;
+  padding: $nw-space-2 $nw-space-4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $nw-space-2;
+  font: 600 0.75rem/1.2 $nw-font-body;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.nw-button--primary {
+  background: $nw-brand;
+  color: $nw-white;
+  &:hover { background: $nw-brand-dark; color: $nw-white; }
+  &:disabled { background: #b6b9af; cursor: not-allowed; }
+}
+
+.nw-button--quiet {
+  background: $nw-brand-soft;
+  color: $nw-brand-dark;
+  &:hover { background: #e2e9dc; }
+}
+
+.nw-button--compact {
+  @extend .nw-button;
+  min-height: 1.75rem;
+  padding: $nw-space-1 $nw-space-2;
+  font-size: 0.5rem;
+}
+
+.nw-card {
+  @extend .nw-surface;
+}
+
+.nw-eyebrow {
+  margin: 0;
+  color: $nw-brand;
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  line-height: 1.4;
+}
+
+.nw-field {
+  min-height: 2.125rem;
+  border: 1px solid $nw-line;
+  border-radius: $nw-radius;
+  background: $nw-white;
+  color: $nw-ink;
+  font: 400 0.6875rem/1.4 $nw-font-body;
+}
+
+.nw-status {
+  display: inline-flex;
+  align-items: center;
+  gap: $nw-space-2;
+  border-radius: $nw-radius-pill;
+  padding: $nw-space-1 $nw-space-2;
+  font-size: 0.4375rem;
+  line-height: 1;
+}
+
+.nw-muted { color: $nw-muted; }
+.nw-divider { border: 0; border-top: 1px solid $nw-line; }

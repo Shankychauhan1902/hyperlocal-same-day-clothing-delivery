@@ -12,7 +12,8 @@ The project is split by responsibility so a feature can be traced from its page 
 - `client/src/data/` contains the sample product catalog and admin preview records.
 - `client/src/utils/format.js` contains shared formatting and image URL helpers.
 - `client/src/services/customerApi.js` contains the customer-facing API request functions.
-- `client/src/styles.css` contains storefront styles; `client/src/admin.css` contains admin styles.
+- `client/src/styles/main.scss` is the single Sass entry point; it imports Bootstrap, shared tokens, and the customer/admin style partials.
+- `client/src/styles/_tokens.scss` and `_component-kit.scss` define shared design values and reusable `nw-*` classes. See [STYLING.md](STYLING.md) for the class guide.
 
 ## Server
 

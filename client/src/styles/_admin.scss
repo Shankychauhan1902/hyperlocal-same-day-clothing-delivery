@@ -1,11 +1,11 @@
 .admin-shell {
   min-height: 100vh;
-  background: #f5f6f3;
-  color: #292c26;
+  background: var(--nw-admin-paper);
+  color: var(--nw-admin-ink);
   font-family: "DM Sans", sans-serif;
-  --green: #53684f;
-  --line: #e8e9e4;
-  --muted: #858980;
+  --green: var(--nw-brand);
+  --line: var(--nw-line);
+  --muted: var(--nw-muted);
 }
 .admin-side {
   position: fixed;
@@ -265,6 +265,7 @@
   color: #76886c;
 }
 .admin-card {
+  @extend .nw-card;
   background: #fff;
   border: 1px solid #e9eae5;
   box-shadow: 0 2px 8px #1a211504;
@@ -459,6 +460,7 @@ tbody tr:last-child td {
   border: 0;
 }
 .status {
+  @extend .nw-status;
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -490,6 +492,8 @@ tbody tr:last-child td {
   background: #f0f0ed;
 }
 .solid-button {
+  @extend .nw-button;
+  @extend .nw-button--primary;
   display: inline-flex;
   align-items: center;
   justify-content: center;

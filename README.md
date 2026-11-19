@@ -9,6 +9,7 @@ A mobile-first marketplace pilot for clothing delivery around Khora Colony. This
 - MySQL schema for shops, products and sizes, orders, payment events, order history, exchanges, and settlements.
 - Product requirements and implementation phases in [the project brief](docs/PROJECT_BRIEF.md).
 - Code map and debugging guide in [ARCHITECTURE.md](docs/ARCHITECTURE.md).
+- Bootstrap + SCSS tokens and reusable class guide in [STYLING.md](docs/STYLING.md).
 
 ## Important prototype limits
 - The storefront and admin preview use illustrative data and local preview state. They are not yet connected to the API or a real inventory database.
@@ -19,6 +20,7 @@ A mobile-first marketplace pilot for clothing delivery around Khora Colony. This
 
 ## Planned stack
 - Client: React + Vite, mobile-first responsive storefront and later installable shopkeeper PWA
+- Styling: Bootstrap 5 + SCSS, shared theme tokens and reusable `nw-*` classes
 - API: Node.js + Express REST API
 - Database: MySQL 8
 - Media / payments: planned after provider and account setup
