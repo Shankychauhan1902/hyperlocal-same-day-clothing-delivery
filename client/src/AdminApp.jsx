@@ -26,7 +26,6 @@ import CatalogPage from "./components/admin/CatalogPage.jsx";
 import OrdersPage from "./components/admin/OrdersPage.jsx";
 import ExchangePolicyPage from "./components/admin/ExchangePolicyPage.jsx";
 import SettlementsPage from "./components/admin/SettlementsPage.jsx";
-import "./admin.css";
 
 const menu = [
   ["overview", "Overview", LayoutDashboard, "WORKSPACE"],

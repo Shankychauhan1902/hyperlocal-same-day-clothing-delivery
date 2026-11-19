@@ -1,6 +1,6 @@
 # Shared styling guide
 
-The client uses Bootstrap 5 with Sass. Do not add a new standalone CSS file for a screen; put shared tokens and patterns in the styles folder, then import feature styles from `client/src/styles/main.scss`.
+The client uses Bootstrap 5 with Sass modules. Do not add a new standalone CSS file for a screen; put shared tokens and patterns in the styles folder, then load feature styles from `client/src/styles/main.scss` with `@use`.
 
 ## Where to change styles
 
@@ -9,6 +9,7 @@ The client uses Bootstrap 5 with Sass. Do not add a new standalone CSS file for 
 - `client/src/styles/_customer.scss` — customer storefront layout and responsive styles.
 - `client/src/styles/_admin.scss` — admin console layout and responsive styles.
 - `client/src/styles/main.scss` — the single style entry point; imports Bootstrap and the project style modules.
+- `client/vite.config.js` — React plugin setup and Sass dependency warning configuration.
 
 ## Reusable classes
 

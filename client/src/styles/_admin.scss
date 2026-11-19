@@ -1,3 +1,5 @@
+@use "./component-kit" as kit;
+
 .admin-shell {
   min-height: 100vh;
   background: var(--nw-admin-paper);
@@ -265,7 +267,7 @@
   color: #76886c;
 }
 .admin-card {
-  @extend .nw-card;
+  @include kit.surface;
   background: #fff;
   border: 1px solid #e9eae5;
   box-shadow: 0 2px 8px #1a211504;
@@ -460,7 +462,7 @@ tbody tr:last-child td {
   border: 0;
 }
 .status {
-  @extend .nw-status;
+  @include kit.status;
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -492,8 +494,8 @@ tbody tr:last-child td {
   background: #f0f0ed;
 }
 .solid-button {
-  @extend .nw-button;
-  @extend .nw-button--primary;
+  @include kit.button;
+  @include kit.button-primary;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1015,3 +1017,5 @@ td select {
     gap: 9px;
   }
 }
+
+

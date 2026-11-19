@@ -1,76 +1,80 @@
-// Shared class kit. Prefer these for new screens; existing feature selectors below extend them.
-.nw-surface {
-  background: $nw-white;
-  border: 1px solid $nw-line;
+@use "./tokens" as tokens;
+
+// Mixins let feature styles reuse the same rules without Sass cross-module @extend.
+@mixin surface {
+  background: tokens.$nw-white;
+  border: 1px solid tokens.$nw-line;
   box-shadow: 0 2px 8px #1a211504;
 }
 
-.nw-button {
+@mixin button {
   min-height: 2.5rem;
   border: 1px solid transparent;
-  border-radius: $nw-radius;
-  padding: $nw-space-2 $nw-space-4;
+  border-radius: tokens.$nw-radius;
+  padding: tokens.$nw-space-2 tokens.$nw-space-4;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: $nw-space-2;
-  font: 600 0.75rem/1.2 $nw-font-body;
+  gap: tokens.$nw-space-2;
+  font: 600 0.75rem/1.2 tokens.$nw-font-body;
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
-.nw-button--primary {
-  background: $nw-brand;
-  color: $nw-white;
-  &:hover { background: $nw-brand-dark; color: $nw-white; }
+@mixin button-primary {
+  background: tokens.$nw-brand;
+  color: tokens.$nw-white;
+  &:hover { background: tokens.$nw-brand-dark; color: tokens.$nw-white; }
   &:disabled { background: #b6b9af; cursor: not-allowed; }
 }
 
-.nw-button--quiet {
-  background: $nw-brand-soft;
-  color: $nw-brand-dark;
-  &:hover { background: #e2e9dc; }
-}
-
-.nw-button--compact {
-  @extend .nw-button;
-  min-height: 1.75rem;
-  padding: $nw-space-1 $nw-space-2;
-  font-size: 0.5rem;
-}
-
-.nw-card {
-  @extend .nw-surface;
-}
-
-.nw-eyebrow {
+@mixin eyebrow {
   margin: 0;
-  color: $nw-brand;
+  color: tokens.$nw-brand;
   font-size: 0.5625rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
   line-height: 1.4;
 }
 
-.nw-field {
+@mixin field {
   min-height: 2.125rem;
-  border: 1px solid $nw-line;
-  border-radius: $nw-radius;
-  background: $nw-white;
-  color: $nw-ink;
-  font: 400 0.6875rem/1.4 $nw-font-body;
+  border: 1px solid tokens.$nw-line;
+  border-radius: tokens.$nw-radius;
+  background: tokens.$nw-white;
+  color: tokens.$nw-ink;
+  font: 400 0.6875rem/1.4 tokens.$nw-font-body;
 }
 
-.nw-status {
+@mixin status {
   display: inline-flex;
   align-items: center;
-  gap: $nw-space-2;
-  border-radius: $nw-radius-pill;
-  padding: $nw-space-1 $nw-space-2;
+  gap: tokens.$nw-space-2;
+  border-radius: tokens.$nw-radius-pill;
+  padding: tokens.$nw-space-1 tokens.$nw-space-2;
   font-size: 0.4375rem;
   line-height: 1;
 }
 
-.nw-muted { color: $nw-muted; }
-.nw-divider { border: 0; border-top: 1px solid $nw-line; }
+// Shared classes to use directly in new components.
+.nw-surface { @include surface; }
+.nw-button { @include button; }
+.nw-button--primary { @include button-primary; }
+.nw-button--quiet {
+  background: tokens.$nw-brand-soft;
+  color: tokens.$nw-brand-dark;
+  &:hover { background: #e2e9dc; }
+}
+.nw-button--compact {
+  @include button;
+  min-height: 1.75rem;
+  padding: tokens.$nw-space-1 tokens.$nw-space-2;
+  font-size: 0.5rem;
+}
+.nw-card { @include surface; }
+.nw-eyebrow { @include eyebrow; }
+.nw-field { @include field; }
+.nw-status { @include status; }
+.nw-muted { color: tokens.$nw-muted; }
+.nw-divider { border: 0; border-top: 1px solid tokens.$nw-line; }

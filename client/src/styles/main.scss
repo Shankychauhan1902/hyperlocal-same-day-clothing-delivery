@@ -1,7 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap");
-@import "bootstrap/scss/functions";
-@import "./tokens";
-@import "bootstrap/scss/bootstrap";
-@import "./component-kit";
-@import "./customer";
-@import "./admin";
+@use "./tokens" as nw;
+@use "bootstrap/scss/bootstrap" with (
+  $primary: nw.$nw-brand,
+  $secondary: #68785f,
+  $success: nw.$nw-success,
+  $warning: #b28750,
+  $info: nw.$nw-info,
+  $body-bg: nw.$nw-paper,
+  $body-color: nw.$nw-ink,
+  $font-family-sans-serif: nw.$nw-font-body,
+  $border-color: nw.$nw-line,
+  $border-radius: nw.$nw-radius,
+  $border-radius-sm: nw.$nw-radius,
+  $border-radius-lg: nw.$nw-radius
+);
+@use "./component-kit";
+@use "./customer";
+@use "./admin";
+@use "./debug";

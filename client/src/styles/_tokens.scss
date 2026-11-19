@@ -23,23 +23,6 @@ $nw-space-4: 1rem;
 $nw-space-5: 1.5rem;
 $nw-space-6: 2rem;
 
-// Bootstrap theme overrides.
-$primary: $nw-brand;
-$secondary: #68785f;
-$success: $nw-success;
-$warning: #b28750;
-$info: $nw-info;
-$body-bg: $nw-paper;
-$body-color: $nw-ink;
-$font-family-sans-serif: $nw-font-body;
-$border-color: $nw-line;
-$border-radius: $nw-radius;
-$border-radius-sm: $nw-radius;
-$border-radius-lg: $nw-radius;
-$btn-border-radius: $nw-radius;
-$input-border-radius: $nw-radius;
-$card-border-radius: $nw-radius;
-
 :root {
   --nw-brand: #{$nw-brand};
   --nw-brand-dark: #{$nw-brand-dark};
@@ -62,3 +45,4 @@ $card-border-radius: $nw-radius;
   --green: var(--nw-brand);
   --paper: var(--nw-paper);
 }
+

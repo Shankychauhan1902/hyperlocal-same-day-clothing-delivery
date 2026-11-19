@@ -1,3 +1,5 @@
+@use "./component-kit" as kit;
+
 :root {
   font-family: var(--nw-font-body);
   color: var(--nw-ink);
@@ -121,7 +123,7 @@ button {
   padding: 10px 0 0;
 }
 .eyebrow {
-  @extend .nw-eyebrow;
+  @include kit.eyebrow;
   font-size: 9px;
   letter-spacing: 1.55px;
   font-weight: 700;
@@ -383,7 +385,7 @@ button {
 }
 .search-field,
 .size-filter {
-  @extend .nw-field;
+  @include kit.field;
   display: flex;
   align-items: center;
   gap: 7px;
@@ -725,7 +727,7 @@ footer > span {
     justify-content: space-between;
   }
   .search-field {
-  @extend .nw-field;
+  @include kit.field;
     flex: 1;
   }
   .search-field input {
@@ -915,8 +917,8 @@ footer > span {
   min-height: 14px;
 }
 .primary-wide {
-  @extend .nw-button;
-  @extend .nw-button--primary;
+  @include kit.button;
+  @include kit.button-primary;
   width: 100%;
   height: 44px;
   border: 0;
@@ -1372,3 +1374,5 @@ footer > span {
     font-size: 36px;
   }
 }
+
+

@@ -5,6 +5,7 @@ A mobile-first marketplace pilot for clothing delivery around Khora Colony. This
 ## What is in this first build
 - Customer storefront with category and size filters, search, product detail and measurements, bag quantity controls, and a checkout preview.
 - Admin preview at `/admin` with dashboard, shop controls, catalog moderation, dispatch tracking, settlements, and an editable Exchange Policy menu page.
+- Development-only diagnostics widget that captures runtime errors, rejected promises, React render errors, and failed API/network requests.
 - Express API shell with health, pincode lookup, and approved in-stock product catalog endpoints.
 - MySQL schema for shops, products and sizes, orders, payment events, order history, exchanges, and settlements.
 - Product requirements and implementation phases in [the project brief](docs/PROJECT_BRIEF.md).
