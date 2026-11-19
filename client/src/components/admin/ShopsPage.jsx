@@ -1,0 +1,4 @@
+import { Status } from './AdminPrimitives.jsx';
+
+export default function Shops({shops,setShops}) { return <section className="admin-card table-card"><div className="card-heading"><div><h2>Partner shops</h2><p>Review onboarding and manage shop availability.</p></div><button className="solid-button" onClick={()=>alert('Shop onboarding will be connected to the API in the next phase.')}>+ Add a shop</button></div><div className="table-scroll"><table><thead><tr><th>SHOP</th><th>OWNER</th><th>AREA</th><th>LISTINGS</th><th>STATUS</th><th/></tr></thead><tbody>{shops.map(s=><tr key={s.name}><td><b>{s.name}</b></td><td>{s.owner}</td><td>{s.area}</td><td>{s.listings}</td><td><Status value={s.status}/></td><td><button className="row-button" onClick={()=>setShops(xs=>xs.map(x=>x===s?{...x,status:x.status==='Active'?'Paused':'Active'}:x))}>{s.status==='Active'?'Pause':'Activate'}</button></td></tr>)}</tbody></table></div></section>; }
+
