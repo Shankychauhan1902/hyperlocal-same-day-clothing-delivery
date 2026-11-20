@@ -1,5 +1,11 @@
-import { ArrowLeft, ArrowRight, Check, MapPin, ShieldCheck } from 'lucide-react';
-import { imageUrl, money } from '../../utils/format.js';
+import {
+  ArrowLeft,
+  ArrowRight,
+  Check,
+  MapPin,
+  ShieldCheck,
+} from "lucide-react";
+import { imageUrl, money } from "../../utils/format.js";
 
 export default function CheckoutPage({
   cart,
@@ -241,4 +247,3 @@ export default function CheckoutPage({
     </main>
   );
 }
-

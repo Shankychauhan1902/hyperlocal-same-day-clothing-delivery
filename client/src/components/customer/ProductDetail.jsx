@@ -1,7 +1,13 @@
-import { ArrowRight, MapPin, X } from 'lucide-react';
-import { imageUrl, money } from '../../utils/format.js';
+import { ArrowRight, MapPin, X } from "lucide-react";
+import { imageUrl, money } from "../../utils/format.js";
 
-export default function ProductDetail({ product, chosen, setChosen, onClose, onAdd }) {
+export default function ProductDetail({
+  product,
+  chosen,
+  setChosen,
+  onClose,
+  onAdd,
+}) {
   return (
     <div
       className="overlay"
@@ -63,4 +69,3 @@ export default function ProductDetail({ product, chosen, setChosen, onClose, onA
     </div>
   );
 }
-

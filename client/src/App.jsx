@@ -133,9 +133,17 @@ export default function App() {
 
   return (
     <>
-      <CustomerHeader bagCount={cart.reduce((count, item) => count + item.quantity, 0)} onOpenBag={() => setCartOpen(true)} />
+      <CustomerHeader
+        bagCount={cart.reduce((count, item) => count + item.quantity, 0)}
+        onOpenBag={() => setCartOpen(true)}
+      />
       <main id="top">
-        <HeroSection pincode={pincode} onPincodeChange={setPincode} onCheckZone={checkZone} service={service} />
+        <HeroSection
+          pincode={pincode}
+          onPincodeChange={setPincode}
+          onCheckZone={checkZone}
+          service={service}
+        />
         <BenefitsStrip />
         <CustomerCatalog
           products={shown}
@@ -177,7 +185,3 @@ export default function App() {
     </>
   );
 }
-
-
-
-

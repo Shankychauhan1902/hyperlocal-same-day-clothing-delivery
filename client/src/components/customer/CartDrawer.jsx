@@ -1,5 +1,5 @@
-import { ArrowRight, ShoppingBag, X } from 'lucide-react';
-import { imageUrl, money } from '../../utils/format.js';
+import { ArrowRight, ShoppingBag, X } from "lucide-react";
+import { imageUrl, money } from "../../utils/format.js";
 
 export default function CartDrawer({
   cart,
@@ -117,4 +117,3 @@ export default function CartDrawer({
     </div>
   );
 }
-
